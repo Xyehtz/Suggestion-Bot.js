@@ -40,7 +40,7 @@ const rest = new REST().setToken(TOKEN); // se declara la constante rest que por
 
     const data = await rest.put(
       // se declara la constante data en la cual rest añade lo siguiente
-      Routes.applicationGuildCommands(CLIENTID, GUILDID), // una ruta para poder colocar los comandos dentro del cliente y del servidor
+      Routes.applicationCommands(CLIENTID), // una ruta para poder colocar los comandos dentro del cliente y del servidor
       { body: commands } // se determina que el cuerpo dentro de data es commands
     );
 

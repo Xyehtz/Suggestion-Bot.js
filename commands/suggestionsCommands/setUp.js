@@ -1,7 +1,9 @@
+// Import the necessary libraries
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { PermissionsBitField, ChannelType, Guild, EmbedBuilder, client } = require('discord.js');
 
 module.exports = {
+  // Set the basic information of the command and the permissions needed to use it
   data: new SlashCommandBuilder()
     .setName('setup')
     .setDescription('This command will create the suggestion text channel')
@@ -10,9 +12,12 @@ module.exports = {
   async execute(interaction) {
     
     try {
+      // Create a new channel with the name: suggestions
       const channel = await interaction.guild.channels.create({
         name: `${'suggestions'}`,
         type: ChannelType.GuildText,
+
+        // Set the permissions for the user that used the command, in this case, view channel, send messages and read message history
         permissionOverwrites: [
           {
             id: interaction.member.id,
@@ -22,6 +27,7 @@ module.exports = {
               PermissionsBitField.Flags.ReadMessageHistory,
             ],
           },
+          // Set the permissions for everyone else in the server, in this case the users wont be able to send messages and create private or public threads
           {
             id: interaction.guild.roles.everyone,
             deny: [
@@ -32,9 +38,11 @@ module.exports = {
           },
         ],
       });
-
+      
+      // Send a reply in the interaction channel letting the user know that the channel was successfully created
       interaction.reply(`Channel created: ${channel}`);
 
+      // Send an embed to the new channel with recommendations on how to use the channel
       const embed = new EmbedBuilder()
         .setAuthor({
           name: interaction.client.user.tag,
@@ -60,6 +68,7 @@ module.exports = {
 
       channel.send({embeds: [embed]});
 
+    // If theres an error console log it and let the user know that something happened
     } catch (error) {
       console.error(error);
       interaction.reply(`Couldn't create suggestions channel`);

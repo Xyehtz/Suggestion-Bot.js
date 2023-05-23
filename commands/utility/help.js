@@ -1,12 +1,14 @@
+// Import all the necessary libraries
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
+  // Set the basic info of the command
   data: new SlashCommandBuilder()
     .setName('help')
     .setDescription('Sends an embed with all the commands'),
 
   async execute(interaction) {
-    
+    // Create an embed with all the commands an a brief summary of what each command does
     const embed = new EmbedBuilder()
       .setAuthor({
         name: interaction.client.user.tag,
@@ -36,7 +38,7 @@ module.exports = {
         text: `Message send by ${interaction.client.user.tag}`,
         iconURL: interaction.client.user.displayAvatarURL(),
       });
-
+    // Send the embed on the interaction channel
     await interaction.reply({embeds: [embed]});
   }
 };

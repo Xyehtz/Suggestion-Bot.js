@@ -1,9 +1,11 @@
+// Import the necessary libraries 
 const { SlashCommandBuilder, ChannelType, EmbedBuilder } = require('discord.js');
 
 module.exports = {
+  // Set the basic information of the command, in this case the command needs an input from the user, being this input the suggestion and the suggestions channel
   data: new SlashCommandBuilder()
     .setName('send-suggestions')
-    .setDescription('Sends a sugggestion to the suggestions channel')
+    .setDescription('Sends a suggestion to the suggestions channel')
 
     .addStringOption((option) =>
       option
@@ -21,15 +23,19 @@ module.exports = {
     ),
 
   async execute(interaction) {
+
+    // Get the text that the user send and the channel selected by the user
     const message = interaction.options.getString('text');
     const channel = interaction.options.getChannel('channel');
 
+    // Verify that the user selected the suggestions channel
     if (channel.name !== 'suggestions') {
       return interaction.reply(
         'You can only send the message to the suggestions channel.'
       );
     }
 
+    // Create an embed with the suggestion as the description
     const embed = new EmbedBuilder()
       .setAuthor({
         name: interaction.user.tag,

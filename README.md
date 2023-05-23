@@ -44,13 +44,13 @@ The bot uses a series of commands to make it easier for people to create a sugge
 
 Now talking more about the bot itself. The bot as said early is focused on making the interaction between the user of a sever and the staff of said server a lot easier, so, how does this bot works? First of all, to start the bot the first thing that you want to do is type "/help", what this command will do is send an embed with all the available commands and the permissions that the member must have to use it, here's an example.
 
-https://github.com/Xyehtz/Suggestion-Bot/assets/33993070/e7951574-6141-45dd-941b-a34c2eddd695
+https://github.com/Xyehtz/Suggestion-Bot.js/assets/33993070/b3bdd114-6aa3-4113-b9bd-5e8dbf77d7fb
 
 ### /setup
 
 Now that we got the embed we can see all the command and the minimum permissions that the user needs to have in order to use it. The next command and the most important is the "/setup" command, this command is the responsible of creating the suggestions channel and setting it all the permissions for a better experience, here's and example of this command.
 
-https://github.com/Xyehtz/Suggestion-Bot/assets/33993070/6d446007-ca20-4f21-aee4-912cffa98d6c
+https://github.com/Xyehtz/Suggestion-Bot.js/assets/33993070/424eaddd-e8df-4768-ab86-6ed4923371b6
 
 As you can see this command automatically creates the suggestions channel where all the suggestions will go, added to the creation of the channel, the bot also automatically sets the permissions of the channel whit the purpose of having the best experience possible, in this case the user that used the command will be able to see the channel, send messages and view the message history, meanwhile everyone else will be able to see the channel and the message history, but won't be able to send messages and create both public and private threads. Is very important to note that to use this command the user must have the permissions to manage channels and manage the server, therefore only the people whit this permissions that are usually the owner, administrators and moderators would be able to use this command.
 
@@ -60,11 +60,11 @@ This command is in charge of sending people's suggestions through the suggestion
 
 First lets take a look to the successful suggestion. 
 
-https://github.com/Xyehtz/Suggestion-Bot/assets/33993070/d64310cc-3152-447e-8cd0-bbaad0ca6cff
+https://github.com/Xyehtz/Suggestion-Bot.js/assets/33993070/9a620f8f-a134-4b3d-a440-c6c2e3702a45
 
 Now lets take a look to the failed suggestion.
 
-https://github.com/Xyehtz/Suggestion-Bot/assets/33993070/4ef8e30b-7503-435e-a16a-6f5e0b80c0c5
+https://github.com/Xyehtz/Suggestion-Bot.js/assets/33993070/3a2ab8f3-d349-4269-b631-24ed7bdcaaf4
 
 As you can see the bot makes sure that the suggestion is send only on the suggestions text channel, therefore avoiding the risk of people using the bot to spam other channels, and overall making a bad use of the bot and its commands
 
@@ -80,13 +80,13 @@ Is very important to note that this command will only work for people with "Mana
 
 This command allows users with "Manage channels", "Manage server" and "Manage members" to see basic user information, is this case the date in which the user joined and the roles that the user has.
 
-https://github.com/Xyehtz/Suggestion-Bot/assets/33993070/01cc0e33-2338-4db0-b89a-db43e132b284
+https://github.com/Xyehtz/Suggestion-Bot.js/assets/33993070/28e93b2f-0b69-42ed-b53e-d12873978fb3
 
 ### /member-count
 
 A very straightforward command that let's everyone knows the number of members of a server
 
-https://github.com/Xyehtz/Suggestion-Bot/assets/33993070/d572fc12-fef6-44eb-bfa4-c66fde1d4f4a
+https://github.com/Xyehtz/Suggestion-Bot.js/assets/33993070/169e9579-ea9d-4e12-9fe8-4ee8ffb8cf5a
 
 ## What's inside of this project?
 

@@ -1,2 +1,5 @@
 /utils/config.json
 Ideas.txt
+package-lock.json
+.vscode
+node_modules
